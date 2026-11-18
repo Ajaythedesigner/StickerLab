@@ -65,7 +65,7 @@ class MainActivity : ComponentActivity() {
                                 try {
                                     waLauncher.launch(WhatsAppBridge.createAddPackIntent(pack))
                                 } catch (_: Exception) {
-                                    Toast.makeText(this, "WhatsApp is not installed on this device", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(this@MainActivity, "WhatsApp is not installed on this device", Toast.LENGTH_SHORT).show()
                                 }
                             }
                         )
@@ -77,7 +77,7 @@ class MainActivity : ComponentActivity() {
                             onSaved = {
                                 packs = repository.getPacks()
                                 editingPack = null
-                                Toast.makeText(this, "Saved to ${currentPack.name}", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this@MainActivity, "Saved to ${currentPack.name}", Toast.LENGTH_SHORT).show()
                             }
                         )
                     }
